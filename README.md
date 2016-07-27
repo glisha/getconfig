@@ -9,6 +9,8 @@ It saves the configurations in configs/*, in seperate daily folders.
 ## REQUIREMENTS
 - Python 2
 - Expect 5+
+- OpenSSH
+- Telnet (for cisco-ios-telnet)
 
 ## USAGE
 
