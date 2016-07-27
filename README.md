@@ -12,21 +12,20 @@ It saves the configurations in configs/*, in seperate daily folders.
 
 ## USAGE
 
-1. Edit getconfig.ini.
-2. Add devices to device_list.ini.
+- Edit getconfig.ini.
+- Add devices to device_list.ini.
 
-'''
+```
 [DEVICE-NAME]
 type=The Device type. Files in expect/* are types. Ex: cisco-nxos-7k
 ip=127.0.0.1
 user=USERNAME
 password=PASSWORD
 enable=FALSE or the enable password
-'''
+```
 
-3. Start the getconfig.sh script.
-
-4. If it encounters an error during fetch it will try to send an email through localhost.
+- Start the getconfig.sh script.
+- If it encounters an error during fetch it will try to send an email through localhost.
 
 ## LICENSE
 Public Domain - Creative Commons CC0 1.0 Universal (CC-0)
