@@ -1,0 +1,25 @@
+#!/usr/bin/expect
+
+log_user 0;
+set deviceip 	[lindex $argv 0]
+set device	[lindex $argv 1]
+set user	[lindex $argv 2]
+set pass	[lindex $argv 3]
+
+set timeout	60
+
+spawn -noecho ssh -o StrictHostKeyChecking=no $user@$deviceip
+
+expect "*assword: "
+send "$pass\r"
+expect ">"
+send "set cli screen-length 0\r"
+expect ">"
+expect *;
+
+log_user 1;
+send "show configuration\r"
+expect ">"
+puts $expect_out(buffer);
+log_user 0;
+send "exit\n"
